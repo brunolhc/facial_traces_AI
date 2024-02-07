@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en" >
+
+<style>
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css);
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+html, body, * {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+html, body {
+  height: 100%;
+  text-align: center;
+}
+
+body {
+  padding: 2rem;
+  background: #f8f8f8;
+}
+
+h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 32px;
+  line-height: 1;
+  color: #454cad;
+  margin-bottom: 4px;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  color: #000000;
+}
+
+div {
+  display:block; 
+  width: 100%; 
+  border: 1px solid #fff;
+}
+
+.wrapper {
+    margin-top: 12px;
+    display: flex;
+    box-sizing: border-box;
+    padding: 32px 16px;
+}
+
+.wrapper > div {
+    box-sizing: border-box;
+    width: calc(50% - 32px);
+    float: left;
+    margin: 0 16px;
+}
+
+
+
+</style>
+
+
+<body>
+  <h2>Facial Contour</h2>
+  <div class="image-container">
+      <img src="{{url_for('get_image')}}" alt="Iris Location and Classification" width="70%">
+  </div>
+
+</body>
+</html>

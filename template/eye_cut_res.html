@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en" >
+
+<style>
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css);
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+html, body, * {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+html, body {
+  height: 100%;
+  text-align: center;
+}
+
+body {
+  padding: 2rem;
+  background: #f8f8f8;
+}
+
+h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 32px;
+  line-height: 1;
+  color: #454cad;
+  margin-bottom: 4px;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  color: #000000;
+}
+
+div {
+  display:block; 
+  width: 100%; 
+  border: 1px solid #fff;
+}
+
+.wrapper {
+    margin-top: 12px;
+    display: flex;
+    box-sizing: border-box;
+    padding: 32px 16px;
+}
+
+.wrapper > div {
+    box-sizing: border-box;
+    width: calc(50% - 32px);
+    float: left;
+    margin: 0 16px;
+}
+
+
+
+</style>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - File Upload &amp; Image Preview</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+
+<div class="wrapper">
+  <div>
+    <h2>Eye 1</h2>
+    <div class="image-container">
+        <img src="{{url_for('get_eye')}}" width="70%">
+    </div>
+  </div>
+  <div>
+    <h2>Eye 2</h2>
+    <div class="image-container">
+        <img src="{{url_for('get_map')}}" width="70%">
+    </div>
+  </div>
+</div>
+
+<div>
+  <h2>Face and Eyes Location</h2>
+    <div class="image-container">
+        <img src="{{url_for('get_image')}}" width="70%">
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en" >
+
+
+<head>
+  <meta charset="UTF-8">
+  <title>Facial AI</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'style.css') }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<h2>Upload an image with a visible face.</h2>
+<p class="lead">Ensure that all head and at least the lower half of the iris are visible. An example is given below.</p>
+<img src="static/images/example.jpg" alt="Example" style="width:20%">
+<p class="lead">Higher resolutions leads to more accurate results. The whole process can take more than a minute.</p>
+
+<!-- Upload  -->
+<form class="uploader" method="POST" action="/requests" enctype="multipart/form-data">
+<div class="form-group file-area">
+  <input type="file" name="image" id="images" required="required"  accept="image/*" onchange="getFileName()">
+  <div class="file-dummy">
+    <div class="success">Image selected. Select or drag here to change</div>
+    <div class="success"><i class="fa fa-upload" style="font-size:48px;color:rgb(131, 131, 131)"></i></div>
+
+      <div class="default">Select an image or drag here</div>
+      <div class="default"><i class="fa fa-upload" style="font-size:48px;color:rgb(131, 131, 131)"></i></div>
+  </div>
+</div>
+  <div text-align: center>
+    <input type="submit" value="Iris Color Mapping" name="iris_map">
+    <input type="submit" value="Facial Contour" name="facial_contours">
+    <input type="submit" value="Cut Face" name="cut_face">
+    <input type="submit" value="Cut Eyes" name="cut_eyes">
+  </div>
+</form>
+<!-- partial -->
+<p class="lead">*All modules use the same AI, composed by a trained neural network. 
+  Ideally, the neural network should be trained with a few hundred thousand samples in several hours. 
+  Unfortunately I do not have that many samples and computational power, 
+  which results in a under-trained neural network with around 90% accuracy, therefore, results may not be accurate or even correct. </p>
+
+</body>
+</html>
